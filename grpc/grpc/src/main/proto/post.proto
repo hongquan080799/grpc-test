@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package post;
+
+// Define messages
+message PostMessage {
+    int32 id = 1;
+    string title = 2;
+    string body = 3;
+    string person = 4;
+    string field1 =5 ;
+
+    string field2 = 6;
+
+    string field3 = 7;
+
+    string field4 = 8;
+
+    string field5 = 9;
+
+    string field6 = 10;
+
+    string field7 = 11;
+
+    string field8 = 12;
+
+
+    string field9 = 13;
+
+
+    string field10 = 14;
+
+    string field11 = 15;
+
+
+    string field12 = 16;
+
+
+    string field13 = 17;
+
+    string field14 = 18;
+
+
+    string field15 = 19;
+
+    string field16 = 20;
+
+
+    string field17 = 21;
+
+    string field18 = 22;
+
+    string field19 = 23;
+
+    string field20 = 24;
+}
+
+message PostResponseMessage {
+    bool is_success = 1;
+}
+
+message GetListPostRequestMessage {
+
+}
+
+message GetListPostResponseMessage {
+    repeated PostMessage list = 1;
+}
+
+// Define services
+service MyService {
+    rpc InsertPost (PostMessage) returns (PostResponseMessage);
+    rpc GetListPost (GetListPostRequestMessage) returns (GetListPostResponseMessage);
+}

@@ -1,0 +1,16 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}
+spring:
+  application:
+    name: clientd
+grpc:
+  server:
+    port: 9092
+server:
+  port: 8080
